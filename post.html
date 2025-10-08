@@ -1,0 +1,81 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Comment + Image Widget</title>
+<link rel="stylesheet" href="style3.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="#" class="logo">Feminism Rights</a>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="post.html">Posts</a>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search..." />
+      <button>🔍</button>
+    </div>
+  </div>
+
+
+<div class="container">
+<div class="card" role="region" aria-label="Comment and image widget">
+<h1>Comment + Image Input</h1>
+<p class="lead">Type a comment, attach images (drag & drop or click), preview then submit. Comments are saved locally in your browser.</p>
+
+
+<p id="helpText" class="visually-hidden">Enter your comment and optionally attach images before submitting.</p>
+<label for="commentText" class="visually-hidden">Your comment</label>
+<textarea id="commentText" name="commentText" placeholder="Write your comment..." required aria-required="true"></textarea>
+
+
+<div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Image upload dropzone">
+<div class="instructions">Drag & drop images here or <button id="browseBtn" type="button" class="btn secondary">Browse</button></div>
+<div class="toolbar" aria-hidden="false">
+<div id="limitInfo">Max 4 images · 5MB each</div>
+</div>
+</div>
+
+
+<input id="fileInput" type="file" accept="image/*" multiple style="display:none" aria-hidden="true">
+<div id="thumbs" class="thumbs" aria-live="polite"></div>
+
+
+<div style="display:flex; justify-content:space-between; align-items:center; gap:12px">
+<div>
+<button id="submitBtn" type="button" class="btn">Submit</button>
+<button id="clearAll" type="button" class="btn secondary">Clear</button>
+</div>
+<div id="statusArea" class="error" aria-live="assertive"></div>
+</div>
+</form>
+
+<section class="comments" id="commentsList" aria-label="Submitted comments"></section>
+
+</div>
+</div>
+
+<footer>
+  <div class="footer-container">
+    <p>© 2025 Women Empowerment. All rights reserved.</p>
+    <ul class="footer-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
